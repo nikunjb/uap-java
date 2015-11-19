@@ -58,6 +58,13 @@
         </executions>
       </plugin>
     </plugins>
+    <extensions>
+      <extension>
+        <groupId>org.springframework.build</groupId>
+        <artifactId>aws-maven</artifactId>
+        <version>5.0.0.RELEASE</version>
+      </extension>
+    </extensions>
   </build>
   <dependencies>
     <dependency>
@@ -83,4 +90,16 @@
       <version>3.2.1</version>
     </dependency>
   </dependencies>
+<distributionManagement>
+  <repository>
+     <id>maven-s3-release-repo-deploy</id>
+     <name>AWS Release Repository</name>
+     <url>s3://repository.stealthsec.com/releases</url>
+  </repository>
+  <snapshotRepository>
+     <id>maven-s3-snapshot-repo-deploy</id>
+     <name>AWS Snapshot Repository</name>
+     <url>s3://repository.stealthsec.com/snapshots</url>
+  </snapshotRepository>
+</distributionManagement>
 </project>
