@@ -114,7 +114,7 @@ public class OSParser {
       } else if (groupCount >= 3) {
         v2 = matcher.group(3);
       }
-      if(v3Replacement != null) {
+      if (v3Replacement != null) {
         v3 = v3Replacement;
       } else if (groupCount >= 4) {
         v3 = matcher.group(4);
